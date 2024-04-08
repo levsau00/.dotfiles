@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sublime)
+plugins=(git sublime macos )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -133,4 +133,6 @@ alias sz='source ~/.zshrc'
 
 alias xun3='ssh xun3'
 alias xun5='ssh xun5'
+alias pc='ssh pc'
+
 
