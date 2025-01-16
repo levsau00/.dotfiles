@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sublime macos )
+plugins=(git sublime macos gh)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,20 +102,21 @@ source $ZSH/oh-my-zsh.sh
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/levsau/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/las564/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/levsau/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/levsau/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/las564/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/las564/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/levsau/miniconda3/bin:$PATH"
+        export PATH="/Users/las564/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-export od="/Users/levsau/Library/CloudStorage/OneDrive-DrexelUniversity"
+export od="/Users/$USER/Library/CloudStorage/OneDrive-DrexelUniversity"
+export obs="$od/obsidian_vault/"
 export gcc="/opt/homebrew/Cellar/gcc/13.1.0/bin/gcc-13"
 export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 
@@ -126,13 +127,18 @@ alias gcm='git commit -m'
 alias pull='git pull'
 alias push='git push'
 
-alias od='cd /Users/levsau/Library/CloudStorage/OneDrive-DrexelUniversity'
+alias od='cd /Users/$USER/Library/CloudStorage/OneDrive-DrexelUniversity'
 alias st='subl'
-alias ls='lsd'
 alias sz='source ~/.zshrc'
 
 alias xun3='ssh xun3'
 alias xun5='ssh xun5'
 alias pc='ssh pc'
 
+export PATH=$PATH:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
+export HOMEBREW_NO_AUTO_UPDATE=1
 
+# Cpp vars
+CMAKE_PREFIX_PATH=$CMAKE_PREFIX_PATH:/Library/Frameworks/pylon.framework/Headers
+export OpenCV_DIR='/Users/las564/src/CADCAM/cpp_libs/build_opencv'
+export BOOST_ROOT='/usr/local/Cellar/boost/1.86.0_2'
