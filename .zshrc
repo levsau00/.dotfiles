@@ -30,14 +30,14 @@ autoload -Uz compinit && compinit
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/las564/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$("${HOME}/miniconda3/bin/conda" 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/las564/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/las564/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "${HOME}/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "${HOME}/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/las564/miniconda3/bin:$PATH"
+        export PATH="${HOME}/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -60,6 +60,10 @@ alias push='git push'
 alias od='cd /Users/$USER/Library/CloudStorage/OneDrive-DrexelUniversity'
 
 alias ls='ls --color'
+
+alias wol-pc='wakeonlan d8:5e:d3:0f:b4:3e'
+alias shutdown-pc='ssh pc "sudo shutdown -h 0"'
+alias reboot-pc='ssh pc "reboot"'
 
 # exports
 export HOMEBREW_NO_AUTO_UPDATE=1
